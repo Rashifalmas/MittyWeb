@@ -1,0 +1,478 @@
+/* Coloring*/
+:root {
+    --cream: #FFF3E4;
+    --peach: #FFD1BA;
+    --soft-pink: #F8E9E9;
+    --brown: #6D4C3D;
+}
+
+/* Universal Styles*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--cream);
+}
+
+/* Header Styles */
+header {
+    background-color: var(--peach);
+    border-radius: 0 0 20px 20px;
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.logo img {
+    width: 40px;
+    height: 40px;
+}
+
+nav a {
+    color: var(--brown);
+    text-decoration: none;
+    margin-left: 2rem;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ffffff;
+}
+
+/* Section Universal Styles */
+section {
+    padding: 6rem 5% 3rem;
+    min-height: 100vh;
+}
+
+h2 {
+    color: var(--brown);
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+/* Home Section */
+#home {
+    background: linear-gradient(var(--peach), var(--cream));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.home h1 {
+    font-size: 3rem;
+    color: var(--brown);
+    margin-bottom: 1rem;
+}
+
+/* About Section */
+#about {
+    background-color: var(--soft-pink);
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+    color: var(--brown);
+}
+
+/* Bobob Grid Styles */
+.kittens-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.kitten-card {
+    text-align: center;
+    background-color: var(--cream);
+    padding: 1rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.kitten-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.kitten-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.kitten-name {
+    margin-top: 0.5rem;
+    font-size: 1.1rem;
+    color: var(--brown);
+    font-weight: 600;
+}
+
+/* Gallery Section */
+#gallery {
+    background-color: var(--cream);
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.gallery-item {
+    border: 3px solid var(--brown);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+    border-color: var(--peach);
+    box-shadow: 0 4px 15px rgba(109, 76, 61, 0.1);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+/* Fun Facts Section */
+#fun-facts {
+    background-color: var(--soft-pink);
+}
+
+.facts-list {
+    list-style: none;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.facts-list li {
+    background-color: var(--cream);
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    position: relative;
+}
+
+.facts-list li::before {
+    content: '🐾';
+    position: absolute;
+    left: -25px;
+}
+
+/* Daily Routine Section */
+#routine {
+    background-color: var(--cream);
+    padding: 6rem 5%;
+}
+
+.routine-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.routine-card {
+    background: var(--soft-pink);
+    padding: 2rem;
+    border-radius: 15px;
+    position: relative;
+    transform: rotate(-2deg);
+    transition: all 0.3s ease;
+    box-shadow: 8px 8px 0 var(--peach);
+}
+
+.routine-card:nth-child(even) {
+    transform: rotate(2deg);
+}
+
+.routine-card:hover {
+    transform: rotate(0deg) scale(1.05);
+    box-shadow: 12px 12px 0 var(--peach);
+}
+
+.routine-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.routine-card h3 {
+    color: var(--brown);
+    margin-bottom: 1rem;
+}
+
+.routine-card ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.routine-card li {
+    padding: 0.5rem 0;
+    border-bottom: 1px dashed var(--brown);
+    color: var(--brown);
+}
+
+.routine-card li:last-child {
+    border-bottom: none;
+}
+
+/* Footer Styles */
+footer {
+    background-color: var(--brown);
+    color: var(--cream);
+    padding: 2rem 5%;
+    text-align: center;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--peach);
+}
+
+.footer-section h3 {
+    color: var(--peach);
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin: 0.5rem 0;
+}
+
+.footer-section ul li a {
+    color: var(--cream);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: var(--peach);
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.social-icons a {
+    color: var(--cream);
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: var(--peach);
+}
+
+.footer-bottom {
+    padding-top: 1rem;
+    font-size: 0.9rem;
+}
+
+.footer-bottom p {
+    margin: 0.5rem 0;
+}
+
+/* Media 768px*/
+@media (max-width: 768px) {
+    /* Header Adjustments*/
+    header {
+        padding: 0.5rem 5%;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .logo {
+        margin-bottom: 0.5rem;
+    }
+
+    .logo h1 {
+        font-size: 1.5rem;
+    }
+
+    nav {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    nav a {
+        margin-left: 0;
+        font-size: 0.9rem;
+    }
+
+    /* Home Section Adjustments*/
+    #home .home h1 {
+        font-size: 2rem;
+    }
+
+    #home .home p {
+        font-size: 1rem;
+    }
+
+    /* About Section Adjustments*/
+    .about-content {
+        font-size: 0.9rem;
+    }
+
+    .kittens-grid {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 1rem;
+    }
+
+    .kitten-card img {
+        height: 120px;
+    }
+
+    .kitten-name {
+        font-size: 1rem;
+    }
+
+    /* Gallery Section Adjustments*/
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 1rem;
+    }
+
+    .gallery-item img {
+        height: 200px;
+    }
+
+    /* Fun Facts Section Adjustments */
+    .facts-list li {
+        padding: 1rem;
+        font-size: 0.9rem;
+    }
+
+    /* Daily Routine Section Adjustments */
+    .routine-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .routine-card {
+        padding: 1rem;
+    }
+
+    .routine-card h3 {
+        font-size: 1.2rem;
+    }
+
+    .routine-card li {
+        font-size: 0.9rem;
+    }
+
+    /* Footer Adjustments */
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .footer-section {
+        text-align: center;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+
+    .footer-bottom {
+        font-size: 0.8rem;
+    }
+}
+
+/* media 480px*/
+@media (max-width: 480px) {
+    /* Header Adjustments*/
+    .logo h1 {
+        font-size: 1.2rem;
+    }
+
+    nav a {
+        font-size: 0.8rem;
+    }
+
+    /* Home Section Adjustments*/
+    #home .home h1 {
+        font-size: 1.5rem;
+    }
+
+    #home .home p {
+        font-size: 0.9rem;
+    }
+
+    /* About Section Adjustments*/
+    .kittens-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .kitten-card img {
+        height: 150px;
+    }
+
+    /* Gallery Section Adjustments*/
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-item img {
+        height: 250px;
+    }
+
+    /* Fun Facts Section Adjustments*/
+    .facts-list li {
+        padding: 0.8rem;
+        font-size: 0.8rem;
+    }
+
+    /* Daily Routine Section Adjustments*/
+    .routine-card h3 {
+        font-size: 1rem;
+    }
+
+    .routine-card li {
+        font-size: 0.8rem;
+    }
+
+    /* Footer Adjustments*/
+    .footer-bottom {
+        font-size: 0.7rem;
+    }
+}
